@@ -1,5 +1,5 @@
 body{
-    /* min-width: 100vw; */
+    max-width: 100vw;
     min-height: 100vh;
     margin: 0;
     width: 100vw;
@@ -10,9 +10,9 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20vh auto 10vh;
-    row-gap: 20px;
-
+    grid-template-rows: 20vh auto auto 10vh;
+    /* row-gap: 20px; */
+    background: linear-gradient(to bottom, rgba(125, 252, 255, 0.2), rgba(63, 126, 127, 0.2))
 }
 
 .container{
@@ -25,9 +25,8 @@ body{
     "third third fourth fourth"
     "round round round round";
     width: 100%;
-    /* margin-left: 2%;
-    margin-right: 2%; */
-    
+
+    transition: 0.5s ease;
     row-gap: 2%;
     column-gap: 2%;
 
@@ -37,51 +36,143 @@ body{
 }
 
 header{
-    background-color: red;
     height: 100%;
     width: 100%;
     position: sticky;
     top: 0;
-    
-    
+    opacity: 0.99;
+
+    z-index: 1999999999999999999999999999999999999999;
+
+    background-image: url(imgs/back.jpg);
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: 2rem;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
 }
 
+.navigation{
+    color: white;
+    background-color: aquamarine;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.navigation:hover{
+    height: 50%;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.navigation a{
+    float:left;
+    color: rgb(49, 88, 105);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* header::before{
+    background-image: url(imgs/headerbackground.jpg);
+    background-size: cover;
+    content: "";
+    position: sticky;
+    opacity: 0.4; */
+/* } */
+
 .first {
-    background-color: black;
+    background-color: aliceblue;
     grid-area: first;
     height: 20vh;
     width: 100%;
+    background-image: url(imgs/Hollong_tree.jpg);
+    background-size: cover;
+
+    border-color: black
+    
 }
 
+/* .img0{
+    background-color: rgb(89, 230, 240);
+    width: 100%;
+    height: 100%;
+    top:0;
+} */
+
 .big{
-    background-color: aqua;
+    width: 100%;
+    height: 100%;
     grid-area: big;
     height: 30vh;
     width: 100%;
     left: 0;
+    background-image: url(imgs/skogsve.jpg);
+    background-size: cover;
+    background-position: 100%;
 }
 
+.categorycard{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.6; */
+}
+.categorycard:hover {
+    background-image: none;
+    background-color: azure
+}
+
+
 .small{
-    background-color: hotpink;
     grid-area: small;
     width: 100%;
     height: 30vh;
-    right: 0;
+    right: 0; 
+    font-display: always;
+    background-image: url(imgs/jjjjjj.jpg);
+    background-size: cover;
 }
+/* 
+.small:hover{
+    background-image: none;
+} */
 
 .third{
     background-color: blue;
+    background-image: url(imgs/headerbackground.jpg);
+    background-size: cover;
     grid-area: third;
     width: 100%;
     height: 30vh;
 }
 
+/* .third::after{
+    content: "";
+    background: url(imgs/4794300_47089ecc.jpg);
+    opacity: 0.5;
+} */
+
 .fourth{
-    background-color: aquamarine;
-    grid-area: fourth;
+    background-image: url(imgs/palm.jpg);
+    background-size: cover; 
+    grid-area: fourth;  
     width: 100%;
     height: 30vh;
 }
+
+/* .fourth::after{
+    content: "";
+    background: url(image.jpg);
+    opacity: 0.5;
+} */
 
 
 .round{
@@ -91,6 +182,7 @@ header{
     justify-content: center;
     grid-area: round;
     display: flex;
+    margin-bottom: 5%;
 }
 
 .circle{
@@ -107,25 +199,346 @@ header{
     content: "";
     display: block;
     padding-bottom: 100%;
+    background: url(image.jpg);
+    opacity: 0.5;
 }
 
 .one{
     grid-area: circle1;
+    background: url(imgs/bark-leaves-maple-4258.jpg);
+    background-size: cover;
+}
+
+.one::after{
+    content: "";
+    opacity: 0.5;
 }
 
 .two{
     grid-area: circle2;
+    background: url(imgs/Hollong_tree.jpg);
+    background-size: cover;
+}
+
+.two::after{
+    content: "";
+    opacity: 0.5;
 }
 
 .three{
     grid-area: circle3;
+    background: url(imgs/monalisa.png);
+    background-size: cover;
+
+}
+
+.three::after{
+    opacity: 0.5;
 }
 
 footer{
-    background-color: cornflowerblue;
+    background-color: #F2F2F2;
     width: 100%;
     height: 100%;
     margin-top: 0;
     bottom: 0;
+    /* margin: 5%; */
+    left: 0;
     /* position: fixed; */
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0;
+    color: grey ;
+    margin: 0;
+}
+
+h2{
+    color: white;
+    border-style: initial;
+    border-color: black;
+    margin:0;
+    
+}
+
+.categorycard:hover h1{
+    opacity: 1;
+    transition: 0.5s ease;
+    /* background-color: azure; */
+}
+
+
+
+
+.bucket{
+    height: 100%;
+    grid-template-areas:
+    "box1 box2 box3"
+    "box4 box5 box6"
+    "box7 box8 box9";
+    display: grid;
+    /* display: flex; */
+    justify-content: center;
+    align-content: center;
+/* 
+    transition: 0.5s ease; */
+
+}
+
+.ett{
+    grid-area: box1;
+    background-image: url(imgs/jjjjjj.jpg);
+    background-size: cover;
+}
+ .två{
+     grid-area: box2;
+     background-image: url(imgs/4794300_47089ecc.jpg);
+     background-size: cover; 
+ }
+ .tre{
+     grid-area: box3;
+     background-image: url(imgs/bark-leaves-maple-4258.jpg);
+     background-size: cover;
+ }
+ .fyra{
+     grid-area: box4;
+     background-image: url(imgs/headerbackground.jpg);
+     background-size: cover;
+ }
+ .fem{
+     grid-area: box5;
+     background-image: url(imgs/tree-over-the-river.jpg);
+     background-size: cover;
+ }
+ .sex{
+     grid-area: box6;
+     background-image: url(imgs/palm.jpg);
+     background-size: cover;
+ }
+.sju{
+    grid-area: box7;
+    background-image: url(imgs/skogsve.jpg);
+    background-size: cover;
+}
+.åtta{
+    grid-area: box8;
+    background-image: url(imgs/uhhhu.jpg);
+    background-size: cover;
+}
+.nio{
+    grid-area: box9;
+    background-image: url(imgs/Hollong_tree.jpg);
+    background-size: cover;
+}
+
+.spann{
+    background-color: white;
+    height: 20vh;
+    width: 25vw;
+    margin: 2vw;
+
+    grid-template-areas: 
+    "bild"
+    "text";
+
+    transition: 0.5s ease;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex; */
+}
+
+.kort{
+    background-color: azure;
+    height: 15vh;
+    grid-area: bild;
+    margin: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.spann:hover .kort{
+    opacity: 0;
+}
+
+h3{
+    color: #F2F2F2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 2%;
+    grid-area:text;
+}
+.spann:hover h3{
+    color: white;
+}
+
+.produkt{
+    max-width: 100vw;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vw;
+}
+
+.produktbild{
+    width: 50vw;
+    height: 30vh;
+    background-image: url(imgs/jjjjjj.jpg);
+    background-size: cover;
+    /* margin: 10vw; */
+}
+
+.annat{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.reklam{
+    background-color: aqua;
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+    "text text text"
+    "newbox1 newbox2 newbox3";
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+    background-image: url(imgs/uhhhu.jpg);
+    background-size: cover;
+    transition: 0.7s ease;
+}
+
+.reklam:hover{
+    opacity: 1;
+    /* color: white; */
+}
+.reklam:hover h5{
+    color: white;
+}
+
+.newbox{
+    width: 75px;
+    height: 100px;
+    /* background-color: aliceblue; */
+    margin: 10%;
+}
+
+.newbox1{
+    grid-area: newbox1;
+    background: url(imgs/4794300_47089ecc.jpg);
+    background-size: cover;
+}
+.newbox2{
+    grid-area:newbox2;
+    background: url(imgs/tree-over-the-river.jpg);
+}
+.newbox3{
+    grid-area: newbox3;
+    background: url(imgs/back.jpg);
+}
+
+h5{
+    font-size: 2rem;
+    margin:0;
+    grid-area: text;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* 
+select{
+    width: 50vw;
+    height: 7vh;
+    margin: 0;
+    border:0;
+    background-color: aquamarine;
+    color: rgb(38, 69, 90);
+    font-size: 2rem;
+
+} */
+
+h6{
+    width: 40%;
+    opacity: 1;
+    color: cornflowerblue;
+    margin: 0;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.bild{
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    top:0;
+}
+
+.saker{
+    width: 70%;
+    height: 100%;
+    background-color: blue;
+    align-self: center;
+    justify-self: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+    flex-direction: row;
+
+    /* align-items: top; */
+}   
+
+.betala{
+    background-color: greenyellow;
+    width: 5rem;
+    height: 3rem;
+    right: 0;
+    box-shadow: 20% black;
+    justify-content: center;
+    align-items: center;
+    /* color: black; */
+}
+
+.wra{
+    grid-template-columns: 100%;
+    grid-template-rows: 0vh auto 10vh;
+}
+/* .namn{
+    justify-self: center;
+    align-self: center;
+}
+.pris{
+    right:0;
+} */
+
+@media screen and (min-width: 600px) {
+    .navigation a{
+        float: none;
+        width: 100%;
+        height: 1vh;
+    }
+
+    .circle{
+        width: 20%;
+    }
 }

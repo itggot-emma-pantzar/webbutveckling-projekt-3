@@ -1,0 +1,133 @@
+body{
+    margin:0;
+}
+.wra{
+    /* grid-template-columns: 100%;
+    grid-template-rows: 20vw auto 10vw; */
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    /* grid-template-columns: 20vh auto 10vh ;
+    grid-template-rows: 100%; */
+    background: linear-gradient(to top, rgba(125, 252,255, 0.2), #ffffff)
+}
+
+header{
+    height: 20vh;
+    width: 100%;
+    position: sticky;
+    align-items: center;
+    /* top: 0; */
+    opacity: 0.99;
+
+    z-index: 1999999999999999999999999999999999999999;
+
+    background-image: url(imgs/back.jpg);
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: 2rem;
+    /* margin-bottom: 30px; */
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+header .material-icons {
+    font-size: 4rem;
+    margin:0;
+
+}
+
+h2{
+    color: white;
+    border-style: initial;
+    border-color: black;
+    margin:0; 
+}
+
+.back{
+    background: none;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+h6{
+    width: 100%;
+    opacity: 1;
+    color:whitesmoke;
+    margin: 0;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* .bild{
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    top:0;
+    align-self:
+} */
+a{
+    color: white;
+}
+.saker{
+    width: 70%;
+    height: 100%;
+    background-image: url(imgs/bark-leaves-maple-4258.jpg);
+    background-size: cover;
+    align-self: center;
+    justify-self: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+    flex-direction: row;
+
+    /* align-items: top; */
+}   
+
+.betala{
+    background-color: rgb(63, 97, 13);
+    width: 6.4rem;
+    height: 3rem;
+    right: 0;
+    box-shadow: 20% black;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    /* color: black; */
+}
+
+.betala h6{
+    font-size: 1rem;
+}
+.betala:hover{
+    width: 10rem;
+    height: 5.7rem;
+
+    transition: 1s;
+}
+.betala:hover h6{
+    font-size: 2rem;
+
+    transition: 1.1s;
+    
+}
+
+.wra{
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh auto 10vh;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    align-self: center;
+}
